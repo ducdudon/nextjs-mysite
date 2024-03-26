@@ -1,10 +1,12 @@
+'use client';
 import Image from 'next/image';
 import styles from './page.module.scss';
+import { AboutWrapper, HeroWrapper, MainWrapper } from './styled';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <section className='hero-area'>
+    <MainWrapper>
+      <HeroWrapper>
         <div className='custom-container'>
           <div className='hero-content content-width'>
             <div className='section-header'>
@@ -66,8 +68,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <section className='about-area'>
+      </HeroWrapper>
+      <AboutWrapper>
         <div className='custom-container'>
           <div className='about-content content-width'>
             <div className='section-header'>
@@ -142,7 +144,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
-    </main>
+      </AboutWrapper>
+    </MainWrapper>
   );
 }
